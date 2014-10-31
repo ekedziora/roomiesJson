@@ -6,6 +6,8 @@ public class UserAccountData {
 
     private String id;
 
+    private String email;
+
     private String name;
 
     @SerializedName("given_name")
@@ -23,6 +25,9 @@ public class UserAccountData {
 
     private String link;
 
+    @SerializedName("verified_email")
+    private String verifiedEmail;
+
     public UserAccountData() {
     }
 
@@ -32,6 +37,14 @@ public class UserAccountData {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getName() {
@@ -88,6 +101,14 @@ public class UserAccountData {
 
     public void setLink(String link) {
         this.link = link;
+    }
+
+    public String getVerifiedEmail() {
+        return verifiedEmail;
+    }
+
+    public void setVerifiedEmail(String verifiedEmail) {
+        this.verifiedEmail = verifiedEmail;
     }
 
 }
