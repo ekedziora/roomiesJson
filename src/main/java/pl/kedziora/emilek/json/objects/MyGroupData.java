@@ -10,15 +10,18 @@ public class MyGroupData {
 
     private String admin;
 
+    private boolean currentUserAdmin;
+
     private List<GroupMember> members;
 
     public MyGroupData() {
     }
 
-    public MyGroupData(String name, String address, String admin, List<GroupMember> members) {
+    public MyGroupData(String name, String address, String admin, boolean currentUserAdmin, List<GroupMember> members) {
         this.name = name;
         this.address = address;
         this.admin = admin;
+        this.currentUserAdmin = currentUserAdmin;
         this.members = members;
     }
 
@@ -44,6 +47,14 @@ public class MyGroupData {
 
     public void setAdmin(String admin) {
         this.admin = admin;
+    }
+
+    public boolean isCurrentUserAdmin() {
+        return currentUserAdmin;
+    }
+
+    public void setCurrentUserAdmin(boolean currentUserAdmin) {
+        this.currentUserAdmin = currentUserAdmin;
     }
 
     public List<GroupMember> getMembers() {
