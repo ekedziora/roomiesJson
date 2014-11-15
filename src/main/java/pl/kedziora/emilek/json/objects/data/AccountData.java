@@ -1,6 +1,6 @@
-package pl.kedziora.emilek.json.objects;
+package pl.kedziora.emilek.json.objects.data;
 
-public class MyAccountData {
+public class AccountData {
 
     private String name;
 
@@ -10,10 +10,10 @@ public class MyAccountData {
 
     private String pictureLink;
 
-    public MyAccountData() {
+    public AccountData() {
     }
 
-    public MyAccountData(String name, String mail, String gender, String pictureLink) {
+    public AccountData(String name, String mail, String gender, String pictureLink) {
         this.name = name;
         this.mail = mail;
         this.gender = gender;

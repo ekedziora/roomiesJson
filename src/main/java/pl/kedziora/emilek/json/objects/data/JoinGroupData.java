@@ -1,4 +1,4 @@
-package pl.kedziora.emilek.json.objects;
+package pl.kedziora.emilek.json.objects.data;
 
 public class JoinGroupData {
 

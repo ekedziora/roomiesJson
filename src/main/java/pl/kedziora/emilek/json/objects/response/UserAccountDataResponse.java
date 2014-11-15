@@ -1,8 +1,8 @@
-package pl.kedziora.emilek.json.objects;
+package pl.kedziora.emilek.json.objects.response;
 
 import com.google.gson.annotations.SerializedName;
 
-public class UserAccountData {
+public class UserAccountDataResponse {
 
     private String id;
 
@@ -28,7 +28,7 @@ public class UserAccountData {
     @SerializedName("verified_email")
     private String verifiedEmail;
 
-    public UserAccountData() {
+    public UserAccountDataResponse() {
     }
 
     public String getId() {

@@ -1,6 +1,6 @@
 package pl.kedziora.emilek.json.objects.params;
 
-import pl.kedziora.emilek.json.objects.MemberToAddData;
+import pl.kedziora.emilek.json.objects.data.MemberToAddData;
 
 import java.util.List;
 

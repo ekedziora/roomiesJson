@@ -1,4 +1,4 @@
-package pl.kedziora.emilek.json.objects;
+package pl.kedziora.emilek.json.objects.response;
 
 import com.google.gson.annotations.SerializedName;
 
