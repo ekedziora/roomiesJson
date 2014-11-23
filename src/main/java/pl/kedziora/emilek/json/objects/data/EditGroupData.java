@@ -8,6 +8,8 @@ public class EditGroupData {
 
     private String address;
 
+    private MemberToAddData admin;
+
     private List<MemberToAddData> members;
 
     private List<MemberToAddData> availableMembers;
@@ -15,9 +17,10 @@ public class EditGroupData {
     public EditGroupData() {
     }
 
-    public EditGroupData(String name, String address, List<MemberToAddData> members, List<MemberToAddData> availableMembers) {
+    public EditGroupData(String name, String address, MemberToAddData admin, List<MemberToAddData> members, List<MemberToAddData> availableMembers) {
         this.name = name;
         this.address = address;
+        this.admin = admin;
         this.members = members;
         this.availableMembers = availableMembers;
     }
@@ -36,6 +39,14 @@ public class EditGroupData {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public MemberToAddData getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(MemberToAddData admin) {
+        this.admin = admin;
     }
 
     public List<MemberToAddData> getMembers() {
