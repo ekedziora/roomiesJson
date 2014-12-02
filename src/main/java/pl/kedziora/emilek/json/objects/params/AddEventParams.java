@@ -1,6 +1,5 @@
 package pl.kedziora.emilek.json.objects.params;
 
-import org.joda.time.LocalDate;
 import pl.kedziora.emilek.json.objects.data.MemberToAddData;
 import pl.kedziora.emilek.json.objects.enums.EventType;
 import pl.kedziora.emilek.json.objects.enums.Interval;
@@ -16,9 +15,9 @@ public class AddEventParams {
 
     private String name;
 
-    private LocalDate startDate;
+    private String startDate;
 
-    private LocalDate endDate;
+    private String endDate;
 
     private Integer intervalNumber;
 
@@ -40,8 +39,6 @@ public class AddEventParams {
 
     private BigDecimal punishmentAmount;
 
-    private Boolean withConfirmation;
-
     private List<MemberToAddData> members;
 
     private RequestParams requestParams;
@@ -49,10 +46,10 @@ public class AddEventParams {
     public AddEventParams() {
     }
 
-    public AddEventParams(EventType eventType, String name, LocalDate startDate, LocalDate endDate, Integer intervalNumber,
+    public AddEventParams(EventType eventType, String name, String startDate, String endDate, Integer intervalNumber,
                           Interval interval, Boolean switchExecutor, Boolean addReminder, ReminderType reminderType,
                           Integer reminderNumber, Interval reminderInterval, Boolean withPunishment, PunishmentType punishmentType,
-                          BigDecimal punishmentAmount, Boolean withConfirmation, List<MemberToAddData> members, RequestParams requestParams) {
+                          BigDecimal punishmentAmount, List<MemberToAddData> members, RequestParams requestParams) {
         this.eventType = eventType;
         this.name = name;
         this.startDate = startDate;
@@ -67,7 +64,6 @@ public class AddEventParams {
         this.withPunishment = withPunishment;
         this.punishmentType = punishmentType;
         this.punishmentAmount = punishmentAmount;
-        this.withConfirmation = withConfirmation;
         this.members = members;
         this.requestParams = requestParams;
     }
@@ -88,19 +84,19 @@ public class AddEventParams {
         this.name = name;
     }
 
-    public LocalDate getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDate startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public LocalDate getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(LocalDate endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 
@@ -182,14 +178,6 @@ public class AddEventParams {
 
     public void setPunishmentAmount(BigDecimal punishmentAmount) {
         this.punishmentAmount = punishmentAmount;
-    }
-
-    public Boolean getWithConfirmation() {
-        return withConfirmation;
-    }
-
-    public void setWithConfirmation(Boolean withConfirmation) {
-        this.withConfirmation = withConfirmation;
     }
 
     public List<MemberToAddData> getMembers() {

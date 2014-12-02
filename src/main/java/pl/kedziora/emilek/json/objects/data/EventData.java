@@ -1,0 +1,46 @@
+package pl.kedziora.emilek.json.objects.data;
+
+import java.util.List;
+
+public class EventData {
+
+    private List<EventEntryData> currentEntries;
+
+    private List<EventEntryData> nextEntries;
+
+    private List<SingleEventData> events;
+
+    public EventData() {
+    }
+
+    public EventData(List<EventEntryData> currentEntries, List<EventEntryData> nextEntries, List<SingleEventData> events) {
+        this.currentEntries = currentEntries;
+        this.nextEntries = nextEntries;
+        this.events = events;
+    }
+
+    public List<EventEntryData> getCurrentEntries() {
+        return currentEntries;
+    }
+
+    public void setCurrentEntries(List<EventEntryData> currentEntries) {
+        this.currentEntries = currentEntries;
+    }
+
+    public List<EventEntryData> getNextEntries() {
+        return nextEntries;
+    }
+
+    public void setNextEntries(List<EventEntryData> nextEntries) {
+        this.nextEntries = nextEntries;
+    }
+
+    public List<SingleEventData> getEvents() {
+        return events;
+    }
+
+    public void setEvents(List<SingleEventData> events) {
+        this.events = events;
+    }
+
+}
