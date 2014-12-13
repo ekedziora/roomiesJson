@@ -24,11 +24,7 @@ public class AddEventParams {
 
     private Boolean switchExecutor;
 
-    private Boolean addReminder;
-
     private Integer confirmationNumber;
-
-    private Interval confirmationInterval;
 
     private Boolean withPunishment;
 
@@ -44,9 +40,9 @@ public class AddEventParams {
     }
 
     public AddEventParams(EventType eventType, String name, String startDate, String endDate, Integer intervalNumber,
-                          Interval interval, Boolean switchExecutor, Boolean addReminder, Integer confirmationNumber,
-                          Interval confirmationInterval, Boolean withPunishment, PunishmentType punishmentType,
-                          BigDecimal punishmentAmount, List<MemberToAddData> members, RequestParams requestParams) {
+                          Interval interval, Boolean switchExecutor, Integer confirmationNumber, Boolean withPunishment,
+                          PunishmentType punishmentType, BigDecimal punishmentAmount, List<MemberToAddData> members,
+                          RequestParams requestParams) {
         this.eventType = eventType;
         this.name = name;
         this.startDate = startDate;
@@ -54,9 +50,7 @@ public class AddEventParams {
         this.intervalNumber = intervalNumber;
         this.interval = interval;
         this.switchExecutor = switchExecutor;
-        this.addReminder = addReminder;
         this.confirmationNumber = confirmationNumber;
-        this.confirmationInterval = confirmationInterval;
         this.withPunishment = withPunishment;
         this.punishmentType = punishmentType;
         this.punishmentAmount = punishmentAmount;
@@ -120,28 +114,12 @@ public class AddEventParams {
         this.switchExecutor = switchExecutor;
     }
 
-    public Boolean getAddReminder() {
-        return addReminder;
-    }
-
-    public void setAddReminder(Boolean addReminder) {
-        this.addReminder = addReminder;
-    }
-
     public Integer getConfirmationNumber() {
         return confirmationNumber;
     }
 
     public void setConfirmationNumber(Integer confirmationNumber) {
         this.confirmationNumber = confirmationNumber;
-    }
-
-    public Interval getConfirmationInterval() {
-        return confirmationInterval;
-    }
-
-    public void setConfirmationInterval(Interval confirmationInterval) {
-        this.confirmationInterval = confirmationInterval;
     }
 
     public Boolean getWithPunishment() {
