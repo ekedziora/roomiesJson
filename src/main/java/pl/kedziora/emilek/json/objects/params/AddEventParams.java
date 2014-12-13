@@ -4,7 +4,6 @@ import pl.kedziora.emilek.json.objects.data.MemberToAddData;
 import pl.kedziora.emilek.json.objects.enums.EventType;
 import pl.kedziora.emilek.json.objects.enums.Interval;
 import pl.kedziora.emilek.json.objects.enums.PunishmentType;
-import pl.kedziora.emilek.json.objects.enums.ReminderType;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -27,11 +26,9 @@ public class AddEventParams {
 
     private Boolean addReminder;
 
-    private ReminderType reminderType;
+    private Integer confirmationNumber;
 
-    private Integer reminderNumber;
-
-    private Interval reminderInterval;
+    private Interval confirmationInterval;
 
     private Boolean withPunishment;
 
@@ -47,8 +44,8 @@ public class AddEventParams {
     }
 
     public AddEventParams(EventType eventType, String name, String startDate, String endDate, Integer intervalNumber,
-                          Interval interval, Boolean switchExecutor, Boolean addReminder, ReminderType reminderType,
-                          Integer reminderNumber, Interval reminderInterval, Boolean withPunishment, PunishmentType punishmentType,
+                          Interval interval, Boolean switchExecutor, Boolean addReminder, Integer confirmationNumber,
+                          Interval confirmationInterval, Boolean withPunishment, PunishmentType punishmentType,
                           BigDecimal punishmentAmount, List<MemberToAddData> members, RequestParams requestParams) {
         this.eventType = eventType;
         this.name = name;
@@ -58,9 +55,8 @@ public class AddEventParams {
         this.interval = interval;
         this.switchExecutor = switchExecutor;
         this.addReminder = addReminder;
-        this.reminderType = reminderType;
-        this.reminderNumber = reminderNumber;
-        this.reminderInterval = reminderInterval;
+        this.confirmationNumber = confirmationNumber;
+        this.confirmationInterval = confirmationInterval;
         this.withPunishment = withPunishment;
         this.punishmentType = punishmentType;
         this.punishmentAmount = punishmentAmount;
@@ -132,28 +128,20 @@ public class AddEventParams {
         this.addReminder = addReminder;
     }
 
-    public ReminderType getReminderType() {
-        return reminderType;
+    public Integer getConfirmationNumber() {
+        return confirmationNumber;
     }
 
-    public void setReminderType(ReminderType reminderType) {
-        this.reminderType = reminderType;
+    public void setConfirmationNumber(Integer confirmationNumber) {
+        this.confirmationNumber = confirmationNumber;
     }
 
-    public Integer getReminderNumber() {
-        return reminderNumber;
+    public Interval getConfirmationInterval() {
+        return confirmationInterval;
     }
 
-    public void setReminderNumber(Integer reminderNumber) {
-        this.reminderNumber = reminderNumber;
-    }
-
-    public Interval getReminderInterval() {
-        return reminderInterval;
-    }
-
-    public void setReminderInterval(Interval reminderInterval) {
-        this.reminderInterval = reminderInterval;
+    public void setConfirmationInterval(Interval confirmationInterval) {
+        this.confirmationInterval = confirmationInterval;
     }
 
     public Boolean getWithPunishment() {

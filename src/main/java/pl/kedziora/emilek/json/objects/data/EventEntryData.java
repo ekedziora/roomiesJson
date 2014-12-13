@@ -2,6 +2,10 @@ package pl.kedziora.emilek.json.objects.data;
 
 public class EventEntryData {
 
+    private Long entryId;
+
+    private String name;
+
     private String startDate;
 
     private String endDate;
@@ -11,10 +15,28 @@ public class EventEntryData {
     public EventEntryData() {
     }
 
-    public EventEntryData(String startDate, String endDate, String status) {
+    public EventEntryData(Long entryId, String name, String startDate, String endDate, String status) {
+        this.entryId = entryId;
+        this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
         this.status = status;
+    }
+
+    public Long getEntryId() {
+        return entryId;
+    }
+
+    public void setEntryId(Long entryId) {
+        this.entryId = entryId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getStartDate() {
