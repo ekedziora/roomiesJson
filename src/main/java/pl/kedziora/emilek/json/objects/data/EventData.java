@@ -10,13 +10,16 @@ public class EventData {
 
     private List<SingleEventData> events;
 
+    private List<EventEntryData> allEntries;
+
     public EventData() {
     }
 
-    public EventData(List<EventEntryData> currentEntries, List<EventEntryData> nextEntries, List<SingleEventData> events) {
+    public EventData(List<EventEntryData> currentEntries, List<EventEntryData> nextEntries, List<SingleEventData> events, List<EventEntryData> allEntries) {
         this.currentEntries = currentEntries;
         this.nextEntries = nextEntries;
         this.events = events;
+        this.allEntries = allEntries;
     }
 
     public List<EventEntryData> getCurrentEntries() {
@@ -43,4 +46,11 @@ public class EventData {
         this.events = events;
     }
 
+    public List<EventEntryData> getAllEntries() {
+        return allEntries;
+    }
+
+    public void setAllEntries(List<EventEntryData> allEntries) {
+        this.allEntries = allEntries;
+    }
 }

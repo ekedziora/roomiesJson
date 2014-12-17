@@ -12,15 +12,18 @@ public class EventEntryData {
 
     private String status;
 
+    private Boolean withConfirmation;
+
     public EventEntryData() {
     }
 
-    public EventEntryData(Long entryId, String name, String startDate, String endDate, String status) {
+    public EventEntryData(Long entryId, String name, String startDate, String endDate, String status, Boolean withConfirmation) {
         this.entryId = entryId;
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
         this.status = status;
+        this.withConfirmation = withConfirmation;
     }
 
     public Long getEntryId() {
@@ -63,4 +66,11 @@ public class EventEntryData {
         this.status = status;
     }
 
+    public Boolean getWithConfirmation() {
+        return withConfirmation;
+    }
+
+    public void setWithConfirmation(Boolean withConfirmation) {
+        this.withConfirmation = withConfirmation;
+    }
 }
